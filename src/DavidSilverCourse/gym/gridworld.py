@@ -411,7 +411,7 @@ def WindyGridWorld():
     env = GridWorldEnv(n_width=10,
                        n_height=7,
                        u_size=60,
-                       default_reward=-1,
+                       default_reward=0,
                        default_type=0,
                        windy=True)
     env.start = (0, 3)

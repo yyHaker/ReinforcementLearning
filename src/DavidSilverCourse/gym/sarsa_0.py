@@ -7,7 +7,7 @@ from gym import Env
 import gym
 from gridworld import *  # import the grid environment
 
-class Agent():
+class Agent(object):
     def __init__(self, env: Env):
         self.env = env  # 个体持有环境的引用
         self.Q = {}   # maintain state-action value function table
@@ -127,7 +127,7 @@ class Agent():
         self._assert_state_in_Q(s_name, randomized=True)
 
 def main():
-    env = SimpleGridWorld()
+    env = WindyGridWorld()
     agent = Agent(env)
     print("Learning.........")
     agent.learning(gamma=0.9, alpha=0.1, max_episode_num=800)
